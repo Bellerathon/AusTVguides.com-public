@@ -151,13 +151,13 @@ def generate_movie_guide(catchment):
                 # Save movies playing today to the our database that records when movies were played, the database only records
                 # the history of movies played in the Sydney broadcast catchment becasuse having a table for every catchment would be
                 # excessive as they only vary slightly.
-                # try:
-                #     todays_date = datetime.today().strftime('%d/%m/%Y')
-                #     if (todays_date == movie['date']):
-                #         if (catchment == "Sydney.xml"):
-                #             save_movie_history(movie['title'], movie['year'], movie['date'], movie['military_start'], movie['channel'])
-                # except:
-                #     pass
+                try:
+                    todays_date = datetime.today().strftime('%d/%m/%Y')
+                    if (todays_date == movie['date']):
+                        if (catchment == "Sydney.xml"):
+                            save_movie_history(movie['title'], movie['year'], movie['date'], movie['military_start'], movie['channel'])
+                except:
+                    pass
 
                 # Append movie object to the list of movies
                 movies.append(movie)

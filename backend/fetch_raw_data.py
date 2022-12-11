@@ -5,14 +5,12 @@ import time
 # This file is used to fetch all the raw XML data for all broadcast catchments which is used in generate_movie_guide.py and generate_tv_guide.py  #
 # =============================================================================================================================================== #
 
-# locations = [
-#     "Sydney", "Wollongong", "Orange_Dubbo", "Albury_Wodonga", "Central_Coast", "Newcastle", "Coffs_Harbour", "South_Coast", "Tamworth", "Wagga_Wagga", "Taree_Port_Macquarie", 
-#     "Broken_Hill", "Brisbane", "Goldcoast", "Cairns", "Sunshine_Coast", "Griffith", "Toowoomba", "Townsville", "Mackay", "Wide_Bay", "Mandurah", "Rockhampton", "Perth", "Bunbury", 
-#     "Albany", "WA_Regional", "Melbourne", "Geelong", "Gippsland", "Bendigo", "Lismore", "Ballarat", "Mildura_Sunraysia", "Shepparton", "Darwin", "NT_Regional", "Remote_Central", 
-#     "Canberra", "Adelaide", "Port_Augusta", "Riverland", "South_East_SA", "Spencer_Gulf", "Hobart", "Launceston"
-# ]
-
-locations = ["Sydney"]
+locations = [
+    "Sydney", "Wollongong", "Orange_Dubbo", "Albury_Wodonga", "Central_Coast", "Newcastle", "Coffs_Harbour", "South_Coast", "Tamworth", "Wagga_Wagga", "Taree_Port_Macquarie", 
+    "Broken_Hill", "Brisbane", "Goldcoast", "Cairns", "Sunshine_Coast", "Griffith", "Toowoomba", "Townsville", "Mackay", "Wide_Bay", "Mandurah", "Rockhampton", "Perth", "Bunbury", 
+    "Albany", "WA_Regional", "Melbourne", "Geelong", "Gippsland", "Bendigo", "Lismore", "Ballarat", "Mildura_Sunraysia", "Shepparton", "Darwin", "NT_Regional", "Remote_Central", 
+    "Canberra", "Adelaide", "Port_Augusta", "Riverland", "South_East_SA", "Spencer_Gulf", "Hobart", "Launceston"
+]
 base_url = "http://xmltv.net/xml_files"
 for location in locations:
     try:
