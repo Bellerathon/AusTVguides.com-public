@@ -1,0 +1,490 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;900&family=Roboto:wght@700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+body {
+  background-color: #161718;
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  color: white;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  min-height: 3.5rem;
+  width: 100%;
+  align-items: center;
+  text-align: center;
+  background-image: radial-gradient(100% 100% at 100% 0, #278ee2 0, #4784f7 100%);
+  border-bottom: thin solid rgba(255, 255, 255, 0.288);
+}
+
+main {
+  flex: 1;
+  height: 100%;
+}
+
+.logo-wrapper {
+  min-width: 15rem;
+}
+
+.page-logo {
+  max-width: 8.5rem;
+  height: 2.5rem;
+  content: url("/home/will/new_guide/frontend/src/assets/page_logo-final-svg.svg");
+}
+
+.top-section-leaderboard:hover {
+  background: rgba(23, 99, 214, 0.336);
+}
+
+.top-section-leaderboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  height: 2.5rem;
+  margin-right: 1rem;
+  appearance: none;
+  background-image: radial-gradient(100% 100% at 50% 0, #3076fa 0, #4a89e7 100%);
+  border: 0;
+  border-radius: 0.3rem;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 2px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+  line-height: 1;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 0.3rem;
+}
+
+.top-section-leaderboard::after {
+  content: "Movies Leaderboard";
+}
+
+.top-section-location:hover {
+  background: rgb(209, 88, 32);
+}
+
+.top-section-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.8rem;
+  align-items: center;
+  height: 2.5rem;
+  box-sizing: border-box;
+  text-overflow: ellipsis;
+  border: 0.5rem;
+  background-color: #3b3e3f;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  background-image: radial-gradient(100% 100% at 100% 0, #ffb85a 0, #ff5454 100%);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 6px 5px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+}
+
+.tvguide-location-dropdown {
+  background-color: #3b3c3f;
+  cursor: pointer;
+  border: none;
+  color: white;
+  outline: none;
+  background-image: radial-gradient(100% 100% at 100% 0, #ffb85a 0, #ff5454 100%);
+  background: none;
+  padding: 0;
+  width: 6rem;
+  margin-left: 5px;
+}
+
+.view-choice-title {
+  background-color: #ffffff;
+  color: rgb(47, 120, 255);
+  font-weight: bold;
+}
+
+.view-choice-box {
+  font-size: 1rem;
+  background-color: black;
+}
+
+.searchbar-wrapper {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.searchbar {
+  width: 18vw;
+  height: 2.2rem;
+  border-radius: 0px 7px 7px 0px;
+  font-size: 1rem;
+  padding: 0.4rem;
+  border: none;
+  background-color: #f5f5f5ea;
+  border: thin solid rgb(255, 255, 255);
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.searchbar:hover,
+.searchbar:focus {
+  background: rgba(236, 236, 236, 0.76);
+}
+
+.searchbar-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.2rem;
+  height: 2.2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 7px 0px 0px 7px;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* input:focus ~ .search-results-wrapper {
+  display: block;
+} */
+
+.search-results-wrapper {
+  display: static;
+  position: absolute;
+  width: 20vw;
+  min-width: 15rem;
+  left: 15rem;
+  top: 3rem;
+  overflow: auto;
+  max-height: 15rem;
+  background-color: #292828;
+  z-index: 1000000;
+}
+
+.search-result-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  height: 2.5rem;
+  font-size: 1rem;
+  padding: 0.3rem;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: thin solid rgba(255, 255, 255, 0.171);
+}
+
+.search-result-item:hover {
+  color: #118afc;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  height: 25rem;
+  width: 100%;
+  color: #ffffff;
+  border-top: thin solid rgba(255, 255, 255, 0.096);
+}
+
+.footer-top {
+  height: auto;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1rem;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+  width: 100%;
+}
+
+.footer-bottom-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  width: 40%;
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: center;
+  justify-content: space-around;
+  height: 30%;
+  width: 100%;
+}
+
+.footer-credits:before {
+  content: "";
+  position: relative;
+  bottom: -120px;
+  height: 1px;
+  width: 70%; /* or 100px */
+  border-top: 1px solid rgba(255, 255, 255, 0.479);
+}
+
+.footer-contactme {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1rem;
+  justify-content: space-around;
+  height: 30%;
+  width: 100%;
+}
+
+.footer-contact-button {
+  width: 9rem;
+  height: 2.5rem;
+  outline: none;
+  border: thin solid rgba(255, 255, 255, 0.603);
+  border-radius: 1rem;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #118afc9f;
+}
+
+.footer-contact-button:hover {
+  background-color: #2671b8;
+}
+
+.footer-bottom-right {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.footer-location-header {
+  font-weight: 900;
+  letter-spacing: 2px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+a:hover {
+  color: #3299fa;
+}
+
+.tmdb-logo {
+  width: 20rem;
+}
+
+.tvguide-location-dropdown::-webkit-scrollbar-track {
+  background-color: #2b2b2b;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #2b2b2b;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(128, 128, 128);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.493);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.596);
+}
+
+::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 750px) {
+  .top-section {
+    height: 3rem;
+  }
+
+  .logo-wrapper {
+    min-width: 3.5rem;
+  }
+
+  .page-logo {
+    width: 1.8rem;
+    max-height: 1.8rem;
+    content: url("/home/will/new_guide/frontend/src/assets/popcornsvg.svg");
+  }
+
+  .searchbar {
+    width: 7.5rem;
+    height: 2rem;
+    padding: 5px;
+    font-size: 12px;
+  }
+
+  .searchbar-logo {
+    height: 2rem;
+    box-sizing: border-box;
+    padding: 0.3rem;
+    width: 1.7rem;
+  }
+
+  .search-result-item {
+    text-align: center;
+    font-size: 0.7rem;
+  }
+
+  .searchbar::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+
+  .search-results-wrapper {
+    width: 46vw;
+    left: 4rem;
+    top: 3rem;
+    overflow: auto;
+    max-height: 15rem;
+  }
+
+  .top-section-location {
+    margin-left: 0;
+    width: 4.5rem;
+    height: 2rem;
+    font-size: 0.6rem;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 0.4rem;
+  }
+
+  .searchbar-wrapper {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+
+  .top-section-leaderboard {
+    margin-left: 0;
+    height: 2rem;
+    min-width: 2.2rem;
+    font-size: 0.6rem;
+    text-align: center;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    padding: 0.4rem;
+  }
+
+  .top-section-leaderboard::after {
+    content: url("/home/will/new_guide/frontend/src/assets/leaderboard_icon.svg");
+  }
+
+  .tvguide-location-dropdown {
+    margin-left: 0rem;
+    width: 1rem;
+  }
+
+  .top-section-printguide {
+    display: none;
+  }
+
+  footer {
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-top: thin solid rgba(255, 255, 255, 0.445);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-credits {
+    height: 50%;
+  }
+
+  .footer-contact-button {
+    height: 2rem;
+    width: 7rem;
+  }
+  .footer-contactme {
+    height: 50%;
+    justify-content: space-between;
+    border-bottom: thin solid rgba(255, 255, 255, 0.247);
+  }
+  .footer-credits:before {
+    display: none;
+  }
+
+  .footer-bottom-right {
+    width: 100%;
+  }
+
+  .footer-bottom-left {
+    width: 100%;
+  }
+
+  .tmdb-logo {
+    width: 9rem;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  html {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}

@@ -1,0 +1,75 @@
+.home-options-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 2.8rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
+  /* background: radial-gradient(circle, rgba(55,102,167,1) 6%, rgba(37,54,85,1) 22%, rgba(26,25,25,0.5804710816801264) 67%); */
+}
+
+.home-view-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  min-height: 2.8rem;
+  min-width: 100%;
+  font-weight: 700;
+  background-image: radial-gradient(100% 100% at 50% 0, #5c95ff 0, #2772e2 100%);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+}
+
+.view-choice-title {
+  min-width: 50%;
+  height: 100%;
+  appearance: none;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  justify-content: center;
+  background-color: inherit;
+  line-height: 1;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  padding: 0.2rem;
+  border-left: thin solid rgba(255, 255, 255, 0.103);
+}
+
+.view-choice-title:hover,
+.view-choice-title:hover,
+.view-choice-title:focus,
+.view-choice-title:focus {
+  background-image: radial-gradient(100% 100% at 50% 0, #2a74fc 0, #3b71c4 100%);
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+  transition: background-color 200ms linear;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 750px) {
+  .home-options-section {
+    min-height: 2rem;
+    width: 100%;
+    margin-bottom: 0.1rem;
+  }
+
+  .home-view-select {
+    border-bottom: none;
+    width: 100%;
+  }
+
+  .view-choice-title {
+    width: 50%;
+    font-size: 0.9rem;
+  }
+
+  .home-view-select {
+    justify-content: center;
+  }
+
+  .home {
+    scroll-snap-type: y mandatory;
+  }
+}

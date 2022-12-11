@@ -1,0 +1,20 @@
+### react ###
+.DS_*
+*.log
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+backend/tvlog.txt
+database-env
+projectvenv
+__pycache__
+backend/data/*

@@ -1,0 +1,160 @@
+.tvguide-options {
+  width: 98%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  background-color: #c3d1d118;
+  border-bottom: thin solid rgba(255, 255, 255, 0.486);
+}
+
+.tvguide-option {
+  margin-right: 1rem;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  color: white;
+  font: inherit;
+  min-height: 2rem;
+}
+
+select option {
+  background-color: rgb(48, 48, 48);
+}
+
+.tvguide-option:hover,
+.tvguide-option:active,
+.tvguide-option:focus {
+  background-color: #63616141;
+}
+
+.main-content-section {
+  min-height: 80vh;
+  width: 98%;
+  margin: 0.3rem 0 2rem 1rem;
+  flex-wrap: wrap;
+  text-align: center;
+  overflow: auto;
+}
+
+.channel-image {
+  font-size: 0.65rem;
+  width: 2.8rem;
+  height: 2.8rem;
+}
+
+.tvguide-table {
+  text-align: center;
+  width: fit-content;
+  overflow: auto;
+  border-spacing: 0px;
+}
+
+.tvguide-th {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  min-width: 4.7rem;
+  position: sticky;
+  left: 1px;
+  background-color: #c3d1d118;
+  z-index: 1;
+  padding: 6px;
+  left: 1px;
+  margin-right: 0.6rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.486);
+}
+
+.tvguide-tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tvguide-td {
+  font-size: 1rem;
+  background: linear-gradient(90deg, rgba(83, 99, 119, 0.623), rgba(68, 77, 92, 0.726) 100%);
+  margin-left: 2px;
+  margin-right: 2px;
+  min-width: 10rem;
+  height: 5rem;
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgb(204, 204, 204) inset;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.tvguide-tr:hover > .tvguide-th {
+  background-color: rgba(255, 255, 255, 0.651);
+}
+
+@media only screen and (max-width: 750px) {
+  .tvguide-options {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 0rem;
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 0.2rem;
+  }
+
+  .tvguide-option {
+    margin: 0;
+    padding: 0;
+    height: 1rem;
+    font-size: 0.7rem;
+  }
+
+  .tvguide-option:nth-child(5) {
+    display: none;
+  }
+
+  .border-bar:nth-child(4) {
+    display: none;
+  }
+
+  .tvguide-table {
+    overflow: visible;
+  }
+
+  .channel-image {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .tvguide-th {
+    min-width: 3rem;
+    left: 1px;
+    padding: 6px;
+    height: 3.5rem;
+    z-index: 9999;
+    margin-right: 0.45rem;
+  }
+
+  .tvguide-tr {
+    height: 4.4rem;
+  }
+
+  .tvguide-tr:hover {
+    background: none;
+  }
+
+  .main-content-section {
+    margin-left: 0;
+    width: 100vw;
+  }
+
+  .main-content-section::-webkit-scrollbar {
+    display: none;
+  }
+}

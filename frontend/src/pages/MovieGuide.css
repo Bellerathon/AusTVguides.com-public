@@ -1,0 +1,120 @@
+.movieguide {
+  display: flex;
+  height: 90vh;
+  width: 99%;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: auto;
+  margin-top: 1rem;
+}
+
+.movieguide-wrapper {
+  width: 95%;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.movieguide-date-title {
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.877);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  width: 95%;
+  min-height: 1rem;
+  padding: 1rem;
+  border-bottom: thin solid rgba(255, 255, 255, 0.103);
+}
+
+.movieguide-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 99%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.5rem;
+  overflow: auto;
+  height: 32rem;
+}
+
+.movieguide-filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  height: 2rem;
+}
+
+.movieguide-filter-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.2rem;
+  width: 15rem;
+  background-color: #0069cc;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  border-radius: 0.5rem;
+  margin: 1rem;
+  border: none;
+  color: white;
+  font: inherit;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+}
+
+.movieguide-container::-webkit-scrollbar {
+  height: 0.9rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .movieguide {
+    margin-top: 0;
+  }
+
+  .movieguide-container::-webkit-scrollbar {
+    display: block;
+    height: 0.7rem;
+  }
+
+  .movieguide-date-title {
+    margin-bottom: 0;
+    font-size: 0.5rem;
+  }
+
+  .movieguide-container {
+    scroll-snap-type: x mandatory;
+    scroll-snap-align: center;
+    height: 24rem;
+    margin-bottom: 0rem;
+  }
+
+  .movieguide-wrapper {
+    scroll-snap-type: y mandatory;
+    margin-bottom: 1rem;
+    min-height: 20rem;
+  }
+
+  .movieguide-filter {
+    display: none;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-height: 1750px) {
+  .movieguide-container {
+    height: 35rem;
+  }
+
+  .movieguide-wrapper {
+    min-height: 10rem;
+    overflow-x: hidden;
+  }
+}

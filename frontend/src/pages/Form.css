@@ -1,0 +1,33 @@
+.contact-form {
+  display: flex;
+  min-height: 30rem;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: 1rem;
+}
+
+.contact-form-message {
+  height: 14rem;
+  width: 30rem;
+  padding: 10px;
+  border-radius: 0.5rem;
+}
+
+@media only screen and (max-width: 750px) {
+  .contact-form {
+    height: 40vh;
+  }
+  .contact-form-message {
+    height: 14rem;
+    width: 20rem;
+    padding: 10px;
+    border-radius: 0.5rem;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-height: 1750px) {
+  .contact-form {
+    height: 40vh;
+  }
+}

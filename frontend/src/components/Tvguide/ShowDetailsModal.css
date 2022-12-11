@@ -1,0 +1,129 @@
+.show-details-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 100%;
+  z-index: 100000000009;
+  background-color: rgba(49, 46, 46, 0.5);
+  cursor: pointer;
+}
+
+.show-details {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 35em;
+  height: 35rem;
+  color: #ffffff;
+  animation-name: animate1;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.2s;
+  box-sizing: border-box;
+  padding: 1rem;
+  overflow: auto;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 153, 255, 0.712);
+  background-color: #252d30;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.show-exit-details-button {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  border: none;
+  background: none;
+}
+
+.show-exit-details-button:hover {
+  color: rgba(255, 255, 255, 0.719);
+}
+
+.show-details-title {
+  color: #ffffff;
+  width: 100%;
+  font-size: 1.7rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  letter-spacing: 0.1rem;
+  padding: 1rem 0;
+  border-bottom: thin solid rgba(255, 255, 255, 0.137);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.show-details-content {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  line-height: 1.7rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.show-details-desc {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  text-align: start;
+  width: 90%;
+  color: white;
+}
+
+.show-details-tags {
+  width: 90%;
+  text-align: start;
+}
+
+@keyframes animate1 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .show-details {
+    position: relative;
+    z-index: 9999;
+    width: 21rem;
+    height: 60%;
+    font-size: 0.7rem;
+  }
+
+  .show-details-title {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (orientation: portrait) and (min-height: 1750px) {
+  .show-details {
+    height: 40rem;
+    width: 30rem;
+  }
+}
