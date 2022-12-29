@@ -12,11 +12,9 @@ import os
 # Loop through each broadcast catchments raw XML data and generate a JSON file containing a TV guide for the next 7 days #
 # ====================================================================================================================== # 
 def main():
-    # broadcast_catchments = os.listdir('./data/raw_xml_data')
-    # for catchment in broadcast_catchments:
-    #     generate_tv_guide(catchment)
-
-    generate_tv_guide("Sydney.xml")
+    broadcast_catchments = os.listdir('./data/raw_xml_data')
+    for catchment in broadcast_catchments:
+         generate_tv_guide(catchment)
 
 # ============================================================================ #
 # Parses the raw XML data and generates an object using data from the XML file #
