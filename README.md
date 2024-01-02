@@ -1,5 +1,7 @@
 # AusTVguides.com
 
+// This repo is not actively updated, this is a seperate public repo for illustrative purposes but is 95% the same as the main private repo
+
 Completed from scratch a deployed full-stack web application that generates a TV guide for any broadcast catchment in Australia. 
 Fully interactive with information modals for every TV show, filtering for date/time/channel.
 A tab dedicated to just movies complete with trailers, cast info, historical showing data, and platform availability for each.
